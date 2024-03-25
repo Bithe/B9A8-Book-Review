@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": "001",
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.ibb.co/c2qLLSV/b1.png",
+      "review": "A brilliant portrayal of the Jazz Age and the American Dream.",
+      "totalPages": 180,
+      "rating": 4.5,
+      "category": "Classic Fiction",
+      "tags": ["Romance", "Drama"],
+      "publisher": "Scribner",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": "002",
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://i.ibb.co/rpcznCM/b8.png",
+      "review": "A timeless exploration of racial injustice and moral growth.",
+      "totalPages": 281,
+      "rating": 4.8,
+      "category": "Fiction",
+      "tags": ["Coming-of-age", "Legal drama"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": "003",
+      "bookName": "1984",
+      "author": "George Orwell",
+      "image": "https://i.ibb.co/b3JHtxH/b7.png",
+      "review": "A chilling dystopian vision of a totalitarian society.",
+      "totalPages": 328,
+      "rating": 4.6,
+      "category": "Science Fiction",
+      "tags": ["Dystopian", "Political"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": "004",
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "https://i.ibb.co/Vq1HDGc/b2.png",
+      "review": "A landmark novel in adolescent literature.",
+      "totalPages": 224,
+      "rating": 4.3,
+      "category": "Coming-of-Age Fiction",
+      "tags": ["Psychological", "Social criticism"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": "005",
+      "bookName": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "image": "https://i.ibb.co/BPkDDKT/kindpng-81724-1.png",
+      "review": "A delightful romantic comedy of manners.",
+      "totalPages": 279,
+      "rating": 4.7,
+      "category": "Romance",
+      "tags": ["Regency", "Satire"],
+      "publisher": "T. Egerton, Whitehall",
+      "yearOfPublishing": 1813
+    },
+    {
+      "bookId": "006",
+      "bookName": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "image": "https://i.ibb.co/vVWWr0d/b3.png",
+      "review": "An enchanting adventure in Middle-earth.",
+      "totalPages": 310,
+      "rating": 4.9,
+      "category": "Fantasy",
+      "tags": ["Adventure", "Quest"],
+      "publisher": "George Allen & Unwin",
+      "yearOfPublishing": 1937
+    }
+  ]
+  
