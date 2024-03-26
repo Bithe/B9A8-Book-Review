@@ -12,7 +12,7 @@ const Home = () => {
       .then((res) => res.json())
       .then(data => setBooks(data));
   }, []);
-  console.log(books[0]);
+  // console.log(books[0]);
 
   return (
     <section className="dark:bg-gray-100 dark:text-gray-800">

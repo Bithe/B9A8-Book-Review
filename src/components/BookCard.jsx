@@ -1,7 +1,11 @@
 import { AiOutlineStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
+import PropTypes from 'prop-types';
+
+
 const BookCard = ({ book }) => {
+  console.log(book);
   const { bookId, image, tags, bookName, author, category, rating } = book;
   return (
     <div className="border rounded-2xl ">
@@ -46,5 +50,10 @@ const BookCard = ({ book }) => {
     </div>
   );
 };
+
+
+BookCard.propTypes ={
+  book: PropTypes.object,
+}
 
 export default BookCard;
