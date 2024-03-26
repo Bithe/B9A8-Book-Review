@@ -1,10 +1,10 @@
 [
     {
-      "bookId": "001",
+      "bookId": 1,
       "bookName": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",
       "image": "https://i.ibb.co/c2qLLSV/b1.png",
-      "review": "A brilliant portrayal of the Jazz Age and the American Dream.",
+      "review": "F. Scott Fitzgerald’s 'The Great Gatsby' is a poignant portrayal of the Jazz Age, weaving a narrative around the elusive American Dream. Set amidst the opulence of Long Island, the novel follows the enigmatic Jay Gatsby and his relentless pursuit of Daisy Buchanan. Fitzgerald masterfully explores themes of wealth, love, and disillusionment, capturing the essence of a bygone era with vivid prose and intricate characterization. Through Gatsby’s tragic story, the novel offers profound insights into the corrupting influence of materialism and the fragility of human aspirations. 'The Great Gatsby' remains a timeless classic, resonating with readers for its enduring themes and evocative storytelling.",
       "totalPages": 180,
       "rating": 4.5,
       "category": "Classic Fiction",
@@ -13,11 +13,11 @@
       "yearOfPublishing": 1925
     },
     {
-      "bookId": "002",
+      "bookId": 2,
       "bookName": "To Kill a Mockingbird",
       "author": "Harper Lee",
       "image": "https://i.ibb.co/rpcznCM/b8.png",
-      "review": "A timeless exploration of racial injustice and moral growth.",
+      "review": "Harper Lee's 'To Kill a Mockingbird' is a profound exploration of racial injustice and moral growth in the Deep South. Through the innocent eyes of Scout Finch, the novel tackles complex issues of prejudice, compassion, and integrity. Atticus Finch's unwavering commitment to justice and equality serves as a beacon of hope in a society rife with bigotry and hatred. Lee's poignant narrative resonates with timeless truths, offering readers a powerful meditation on the human condition and the enduring struggle for dignity and fairness. 'To Kill a Mockingbird' remains a seminal work of American literature, inspiring generations with its profound message of empathy and understanding.",
       "totalPages": 281,
       "rating": 4.8,
       "category": "Fiction",
@@ -26,11 +26,11 @@
       "yearOfPublishing": 1960
     },
     {
-      "bookId": "003",
+      "bookId": 3,
       "bookName": "1984",
       "author": "George Orwell",
       "image": "https://i.ibb.co/b3JHtxH/b7.png",
-      "review": "A chilling dystopian vision of a totalitarian society.",
+      "review": "George Orwell's '1984' is a chilling dystopian masterpiece that continues to captivate readers with its bleak vision of a totalitarian future. Set in a world of constant surveillance and thought control, the novel follows Winston Smith as he rebels against the oppressive regime of Big Brother. Orwell's stark portrayal of tyranny and censorship serves as a haunting reminder of the dangers of unchecked power and the erosion of individual freedom. '1984' remains a seminal work of political fiction, resonating with audiences for its timely warnings about the perils of authoritarianism and the importance of preserving democracy and human rights.",
       "totalPages": 328,
       "rating": 4.6,
       "category": "Science Fiction",
@@ -39,11 +39,11 @@
       "yearOfPublishing": 1949
     },
     {
-      "bookId": "004",
+      "bookId": 4,
       "bookName": "The Catcher in the Rye",
       "author": "J.D. Salinger",
       "image": "https://i.ibb.co/Vq1HDGc/b2.png",
-      "review": "A landmark novel in adolescent literature.",
+      "review": "J.D. Salinger's 'The Catcher in the Rye' is a seminal coming-of-age novel that captures the angst and alienation of adolescence with unparalleled authenticity. Through the rebellious eyes of Holden Caulfield, the novel explores themes of identity, innocence, and societal conformity. Caulfield's introspective journey resonates with readers of all ages, offering a poignant portrayal of the universal struggles of youth. Salinger's raw and honest prose immerses readers in Caulfield's world, eliciting empathy and introspection. 'The Catcher in the Rye' remains a timeless classic, inspiring generations with its candid exploration of adolescence and the search for authenticity.",
       "totalPages": 224,
       "rating": 4.3,
       "category": "Coming-of-Age Fiction",
@@ -52,11 +52,11 @@
       "yearOfPublishing": 1951
     },
     {
-      "bookId": "005",
+      "bookId": 5,
       "bookName": "Pride and Prejudice",
       "author": "Jane Austen",
       "image": "https://i.ibb.co/BPkDDKT/kindpng-81724-1.png",
-      "review": "A delightful romantic comedy of manners.",
+      "review": "Jane Austen's 'Pride and Prejudice' is a timeless romantic comedy of manners that continues to captivate readers with its wit, charm, and timeless appeal. Set in the genteel world of Georgian England, the novel follows the spirited Elizabeth Bennet as she navigates the complexities of love, class, and societal expectations. Austen's keen observations and incisive social commentary illuminate the foibles of human nature, while her sparkling dialogue and memorable characters bring the story to life. 'Pride and Prejudice' remains a beloved classic, celebrated for its enduring themes of love, integrity, and the pursuit of happiness.",
       "totalPages": 279,
       "rating": 4.7,
       "category": "Romance",
@@ -65,11 +65,11 @@
       "yearOfPublishing": 1813
     },
     {
-      "bookId": "006",
+      "bookId": 6,
       "bookName": "The Hobbit",
       "author": "J.R.R. Tolkien",
       "image": "https://i.ibb.co/vVWWr0d/b3.png",
-      "review": "An enchanting adventure in Middle-earth.",
+      "review": "J.R.R. Tolkien's 'The Hobbit' is an enchanting adventure set in the richly imagined world of Middle-earth, captivating readers with its whimsical charm and epic scope. The novel follows the reluctant hero Bilbo Baggins as he embarks on a perilous quest to reclaim treasure guarded by the fearsome dragon Smaug. Along the way, Bilbo encounters a host of colorful characters, battles goblins and trolls, and discovers the true meaning of courage and friendship. Tolkien's masterful storytelling and rich mythology make 'The Hobbit' a timeless classic, beloved by readers of all ages for its enduring themes of heroism, loyalty, and the power of imagination.",
       "totalPages": 310,
       "rating": 4.9,
       "category": "Fantasy",
