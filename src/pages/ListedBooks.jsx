@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import ReadBookCard from "../components/ReadBookCard";
 
 const ListedBooks = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -51,18 +50,6 @@ const ListedBooks = () => {
       {/*  */}
 
       <Outlet></Outlet>
-
-      {/* READ BOOKS */}
-      <div className=" p-8 sm:space-x-6 dark:bg-gray-50 dark:text-gray-800">
-        {readList.map((readBook) => (
-          <ReadBookCard
-            key={readBook.bookId}
-            readBook={readBook}
-          ></ReadBookCard>
-        ))}
-      </div>
-
-
       
     </div>
   );

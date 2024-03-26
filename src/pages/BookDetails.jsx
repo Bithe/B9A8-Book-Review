@@ -1,5 +1,5 @@
-import { NavLink, useLoaderData, useParams } from "react-router-dom";
-import { saveReadDataToLocal } from "../utility/localStorage";
+import {  useLoaderData, useParams } from "react-router-dom";
+import { saveReadDataToLocal, saveWishlistDataToLocal } from "../utility/localStorage";
 
 const BookDetails = () => {
   const bookDetails = useLoaderData();
@@ -28,6 +28,12 @@ const BookDetails = () => {
   const handleRead = () => {
     saveReadDataToLocal(book)
   };
+
+  // WISHLIST BUTTON
+  const handleWishlist = () => {
+    saveWishlistDataToLocal(book)
+  };
+
   return (
     <div className="dark:bg-gray-100 dark:text-gray-900 container mx-auto space-y-6 sm:space-y-12 border ">
       <div className="container grid grid-cols-12 mx-auto">
@@ -98,8 +104,13 @@ const BookDetails = () => {
                 >
                   Read
                 </button>
-                <NavLink>Wishlist</NavLink>{" "}
-              </div>
+
+                <button
+                  onClick={handleWishlist}
+                  className="btn text-lg font-bold"
+                >
+                  Wishlist
+                </button>              </div>
             </div>
           </div>
         </div>
