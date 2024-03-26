@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import ReadBookCard from "../components/ReadBookCard";
 
 const ListedBooks = () => {
@@ -38,7 +38,7 @@ const ListedBooks = () => {
 
         {/* AUTHOR */}
         <Link
-          to={`author`}
+          to={`wishlist`}
           onClick={() => setTabIndex(1)}
           className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
             tabIndex === 1 ? "border border-b-0" : "border-b"
@@ -50,6 +50,8 @@ const ListedBooks = () => {
       </div>
       {/*  */}
 
+      <Outlet></Outlet>
+
       {/* READ BOOKS */}
       <div className=" p-8 sm:space-x-6 dark:bg-gray-50 dark:text-gray-800">
         {readList.map((readBook) => (
@@ -59,6 +61,9 @@ const ListedBooks = () => {
           ></ReadBookCard>
         ))}
       </div>
+
+
+      
     </div>
   );
 };
