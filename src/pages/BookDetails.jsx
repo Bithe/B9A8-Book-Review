@@ -1,5 +1,8 @@
-import {  useLoaderData, useParams } from "react-router-dom";
-import { saveReadDataToLocal, saveWishlistDataToLocal } from "../utility/localStorage";
+import { useLoaderData, useParams } from "react-router-dom";
+import {
+  saveReadDataToLocal,
+  saveWishlistDataToLocal,
+} from "../utility/localStorage";
 
 const BookDetails = () => {
   const bookDetails = useLoaderData();
@@ -26,12 +29,12 @@ const BookDetails = () => {
   // READ BUTTON
 
   const handleRead = () => {
-    saveReadDataToLocal(book)
+    saveReadDataToLocal(book);
   };
 
   // WISHLIST BUTTON
   const handleWishlist = () => {
-    saveWishlistDataToLocal(book)
+    saveWishlistDataToLocal(book);
   };
 
   return (
@@ -98,19 +101,16 @@ const BookDetails = () => {
                 </p>
               </div>
               <div className="gap-8 flex">
-                <button
-                  onClick={handleRead}
-                  className="btn text-lg font-bold"
-                >
+                <button onClick={handleRead} className="btn text-lg font-bold">
                   Read
                 </button>
-
                 <button
                   onClick={handleWishlist}
                   className="btn text-lg font-bold"
                 >
                   Wishlist
-                </button>              </div>
+                </button>{" "}
+              </div>
             </div>
           </div>
         </div>

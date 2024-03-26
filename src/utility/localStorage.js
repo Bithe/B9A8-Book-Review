@@ -13,7 +13,7 @@ export const saveReadDataToLocal = (book) => {
 export const saveWishlistDataToLocal = (book) => {
   let saveWish = JSON.parse(localStorage.getItem("wish")) || [];
 
-  const isExist = saveWish.find((read) => read.bookId == book.bookId);
+  const isExist = saveWish.find((wish) => wish.bookId == book.bookId);
   if (isExist) {
     alert("ghhh");
   } else {

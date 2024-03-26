@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 const BookCard = ({ book }) => {
-  console.log(book);
+  // console.log(book);
   const { bookId, image, tags, bookName, author, category, rating } = book;
   return (
     <div className="border rounded-2xl ">
