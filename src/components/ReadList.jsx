@@ -2,19 +2,70 @@ import { useEffect, useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { GoPeople } from "react-icons/go";
 import { BsFileEarmarkBarGraph } from "react-icons/bs";
+import { AiOutlineArrowDown } from "react-icons/ai";
 
 const ReadList = () => {
   const [readList, setReadList] = useState([]);
   console.log(readList);
 
+  // DISPLAY BOOKS
+  const [displayBooks, setDisplayBooks] = useState([]);
+
+  const handleReadListFilter = (filter) => {
+    if (filter === "all") {
+      setDisplayBooks(readList);
+    } else if (filter === "category") {
+      const sortedBooks = readList.slice().sort((a, b) => {
+        return b.category.localeCompare(a.category);
+      });
+      setDisplayBooks(sortedBooks);
+    } else if (filter === "rating") {
+      const sortBooks = readList.slice().sort((a, b) => {
+        return b.rating - a.rating; // Assuming rating is a numerical value
+      });
+      setDisplayBooks(sortBooks);
+    }
+  };
+
   useEffect(() => {
     const getReadData = JSON.parse(localStorage.getItem("books")) || [];
     setReadList(getReadData);
+    setDisplayBooks(getReadData);
   }, []);
-  
+
   return (
     <div className="">
-      {readList.map((book) => (
+      {/* SORTING BUTTON */}{" "}
+      <div className="flex justify-center items-center py-8 ">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn m-1 bg-[#23BE0A] text-white text-lg font-semibold ">
+          Sort By <AiOutlineArrowDown />
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li
+              onClick={() => {
+                handleReadListFilter("all");
+              }}
+            >
+              <a>All</a>
+            </li>
+            <li onClick={() => handleReadListFilter("category")}>
+              <a>Category</a>
+            </li>
+            <li onClick={() => handleReadListFilter("rating")}>
+              <a>Rating</a>
+            </li>
+            <li>
+              <a>Number of pages</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {/*  */}
+      {displayBooks.map((book) => (
         <div
           className="p-8 lg:flex space-x-6 dark:bg-gray-50 dark:text-gray-800 border"
           key={book.bookId}
@@ -28,7 +79,7 @@ const ReadList = () => {
               />
             </div>
           </div>
-          <div className="space-y-4 border">
+          <div className="space-y-4 border py-8">
             <div>
               <h2 className="text-2xl font-semibold">{book.bookName}</h2>
               <span className="text-sm dark:text-gray-600">

@@ -28,7 +28,7 @@ const Home = () => {
             <h3 className="text-2xl lg:text-6xl py-4 font-semibold sm:text-4xl ">
               Books to freshen up your bookshelf{" "}
             </h3>
-            <NavLink className="">
+            <NavLink to="/listedBooks" className="">
               <button className="btn btn-primary">View The List</button>
             </NavLink>{" "}
           </div>
