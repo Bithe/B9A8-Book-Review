@@ -36,7 +36,7 @@ const Home = () => {
               <img
                 src={books[0].image}
                 alt=""
-                className=" h-64 rounded sm:h-96 lg:col-span-5 dark:bg-gray-500 text-center items-center  justify-center border m-2 "
+                className=" lg:h-64 rounded lg:col-span-5 dark:bg-gray-500 text-center items-center  justify-center border m-2 "
               />
             )}
         </a>

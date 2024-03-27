@@ -17,7 +17,7 @@ const BookCard = ({ book }) => {
         <div className="flex justify-center bg-[#1313130D] m-4 rounded-2xl ">
           <img
             role="presentation"
-            className=" rounded h-44 dark:bg-gray-500 p-4"
+            className=" rounded lg:h-44 dark:bg-gray-500 p-4"
             src={image}
           />
         </div>

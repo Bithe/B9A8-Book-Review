@@ -50,7 +50,7 @@ const Nav = () => {
               </NavLink>
 
               <NavLink
-                to="read/"
+                to="/barChart"
                 className={({ isActive }) =>
                   isActive
                     ? "text-[#23BE0A] border rounded-lg p-4 font-semibold border-[#23BE0A]"

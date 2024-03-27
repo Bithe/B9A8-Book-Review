@@ -70,8 +70,8 @@ const ReadList = () => {
           className="p-8 lg:flex space-x-6 dark:bg-gray-50 dark:text-gray-800 border"
           key={book.bookId}
         >
-          <div className="flex-shrink-0 w-full h-44 sm:h-32 sm:w-32 mb-10 border">
-            <div className="p-4 bg-pink-200 rounded-2xl items-center justify-center flex ">
+          <div className="flex-shrink-0 w-full sm:w-32 mb-10 border">
+            <div className="p-4 bg-[#1313130D] rounded-2xl items-center justify-center flex ">
               <img
                 src={book.image}
                 alt=""

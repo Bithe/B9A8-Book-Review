@@ -1,27 +1,8 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 
 const PagesToRead = () => {
   const [readBooks, setReadBooks] = useState([]);
-
-  //   useEffect(() => {
-  //     axios
-  //       .get("booksData.json")
-  //       // .then(data => console.log(data.data));
-  //       .then((data) => {
-  //         const bookData = data.data;
-  //         const readBooksData = bookData.map((book) => {
-  //           const obj = {
-  //             name: book.bookName,
-  //             pages: book.totalPages,
-  //           };
-  //           return obj;
-  //         });
-  //         console.log(readBooksData);
-  //         setReadBooks(readBooksData);
-  //       });
-  //   }, []);
 
   useEffect(() => {
     const savedReadBooks = JSON.parse(localStorage.getItem("books")) || [];
