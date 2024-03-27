@@ -27,6 +27,7 @@ const ReadList = () => {
     }
   };
 
+  // LOAD DATA FROM LOCAL STORAGE
   useEffect(() => {
     const getReadData = JSON.parse(localStorage.getItem("books")) || [];
     setReadList(getReadData);
@@ -65,6 +66,7 @@ const ReadList = () => {
         </div>
       </div>
       {/*  */}
+
       {displayBooks.map((book) => (
         <div
           className="p-8 lg:flex space-x-6 dark:bg-gray-50 dark:text-gray-800 border"

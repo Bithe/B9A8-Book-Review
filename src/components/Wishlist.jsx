@@ -2,21 +2,74 @@ import { useEffect, useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { GoPeople } from "react-icons/go";
 import { BsFileEarmarkBarGraph } from "react-icons/bs";
+import { AiOutlineArrowDown } from "react-icons/ai";
+
 
 const Wishlist = () => {
   const [wishList, setWishList] = useState([]);
   console.log(wishList);
+
+  // DISPLAY BOOKS
+  const [displayBooks, setDisplayBooks] = useState([]);
+
+  const handleReadListFilter = (filter) => {
+    if (filter === "all") {
+      setDisplayBooks(wishList);
+    } else if (filter === "category") {
+      const sortedBooks = wishList.slice().sort((a, b) => {
+        return b.category.localeCompare(a.category);
+      });
+      setDisplayBooks(sortedBooks);
+    } else if (filter === "rating") {
+      const sortBooks = wishList.slice().sort((a, b) => {
+        return b.rating - a.rating; // Assuming rating is a numerical value
+      });
+      setDisplayBooks(sortBooks);
+    }
+  };
 
   useEffect(() => {
     const getWishData = JSON.parse(localStorage.getItem("wish")) || [];
     setWishList(getWishData);
   }, []);
 
-
-
   return (
     <div className="">
-      {wishList.map((book) => (
+      {/* SORTING BUTTON */}{" "}
+      <div className="flex justify-center items-center py-8 ">
+        <div className="dropdown">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn m-1 bg-[#23BE0A] text-white text-lg font-semibold "
+          >
+            Sort By <AiOutlineArrowDown />
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li
+              onClick={() => {
+                handleReadListFilter("all");
+              }}
+            >
+              <a>All</a>
+            </li>
+            <li onClick={() => handleReadListFilter("category")}>
+              <a>Category</a>
+            </li>
+            <li onClick={() => handleReadListFilter("rating")}>
+              <a>Rating</a>
+            </li>
+            <li>
+              <a>Number of pages</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {/*  */}
+      {displayBooks.map((book) => (
         <div
           className="p-8 lg:flex space-x-6 dark:bg-gray-50 dark:text-gray-800 border"
           key={book.bookId}
