@@ -5,22 +5,31 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 const PagesToRead = () => {
   const [readBooks, setReadBooks] = useState([]);
 
+  //   useEffect(() => {
+  //     axios
+  //       .get("booksData.json")
+  //       // .then(data => console.log(data.data));
+  //       .then((data) => {
+  //         const bookData = data.data;
+  //         const readBooksData = bookData.map((book) => {
+  //           const obj = {
+  //             name: book.bookName,
+  //             pages: book.totalPages,
+  //           };
+  //           return obj;
+  //         });
+  //         console.log(readBooksData);
+  //         setReadBooks(readBooksData);
+  //       });
+  //   }, []);
+
   useEffect(() => {
-    axios
-      .get("booksData.json")
-      // .then(data => console.log(data.data));
-      .then((data) => {
-        const bookData = data.data;
-        const readBooksData = bookData.map((book) => {
-          const obj = {
-            name: book.bookName,
-            pages: book.totalPages,
-          };
-          return obj;
-        });
-        console.log(readBooksData);
-        setReadBooks(readBooksData);
-      });
+    const savedReadBooks = JSON.parse(localStorage.getItem("books")) || [];
+    const transformedReadBooks = savedReadBooks.map((book) => ({
+      name: book.bookName,
+      pages: book.totalPages,
+    }));
+    setReadBooks(transformedReadBooks);
   }, []);
 
   const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
@@ -58,7 +67,12 @@ const PagesToRead = () => {
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />
-        <Bar dataKey="pages" fill="#8884d8" shape={<TriangleBar />} label={{ position: "top" }}>
+        <Bar
+          dataKey="pages"
+          fill="#8884d8"
+          shape={<TriangleBar />}
+          label={{ position: "top" }}
+        >
           {readBooks.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index % 20]} />
           ))}
