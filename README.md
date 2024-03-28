@@ -10,6 +10,9 @@
 - User-friendly interface with intuitive navigation
 - Responsive design for seamless experience across devices
 
+- live site :https://farzana-bookvibe.netlify.app/
+
+
 ## Technologies Used
 
 - React
