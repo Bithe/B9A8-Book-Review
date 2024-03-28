@@ -1,3 +1,28 @@
+# Book Vibe
+## Demo
+
+- Check out the live demo of Book Vibe [here](https://farzana-bookvibe.netlify.app/).
+## Features
+
+- Browse through different categories of books
+- View detailed information about each book
+- Add books to your reading list or wishlist
+- User-friendly interface with intuitive navigation
+- Responsive design for seamless experience across devices
+
+## Technologies Used
+
+- React
+- Vite
+- React Router
+- Tailwind CSS
+
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
