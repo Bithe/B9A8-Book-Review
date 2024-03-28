@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 const ReadList = () => {
   const [readList, setReadList] = useState([]);
-  const {bookId} = readList;
   console.log(readList);
 
   const [displayReadBooks, setDisplayReadBooks] = useState([]);

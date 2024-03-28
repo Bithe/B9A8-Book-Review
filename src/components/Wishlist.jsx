@@ -3,34 +3,48 @@ import { CiLocationOn } from "react-icons/ci";
 import { GoPeople } from "react-icons/go";
 import { BsFileEarmarkBarGraph } from "react-icons/bs";
 import { AiOutlineArrowDown } from "react-icons/ai";
-
+import { Link } from "react-router-dom";
 
 const Wishlist = () => {
   const [wishList, setWishList] = useState([]);
   console.log(wishList);
 
-  // DISPLAY BOOKS
-  const [displayBooks, setDisplayBooks] = useState([]);
+  //
+  const [displayWishList, setDisplayWishList] = useState([]);
 
-  const handleReadListFilter = (filter) => {
+  // SORTING DISPLAY DATA
+  const handleWishListFilter = (filter) => {
     if (filter === "all") {
-      setDisplayBooks(wishList);
-    } else if (filter === "category") {
-      const sortedBooks = wishList.slice().sort((a, b) => {
-        return b.category.localeCompare(a.category);
-      });
-      setDisplayBooks(sortedBooks);
-    } else if (filter === "rating") {
-      const sortBooks = wishList.slice().sort((a, b) => {
-        return b.rating - a.rating; // Assuming rating is a numerical value
-      });
-      setDisplayBooks(sortBooks);
+      setDisplayWishList(wishList);
     }
+    else if(filter === 'rating'){
+      const sortWishList = wishList.slice().sort((a,b)=>{
+        return b.rating - a.rating;
+      })
+      setDisplayWishList(sortWishList)
+    }
+    else if(filter === 'totalPages'){
+      const sortWishList = wishList.slice().sort((a,b)=>{
+        return b.totalPages - a.totalPages;
+      })
+      setDisplayWishList(sortWishList)
+    }
+
+    else if(filter === 'yearOfPublishing'){
+      const sortWishList = wishList.slice().sort((a,b)=>{
+        return b.yearOfPublishing - a.yearOfPublishing;
+      })
+      setDisplayWishList(sortWishList)
+    }
+   
   };
+
+  //
 
   useEffect(() => {
     const getWishData = JSON.parse(localStorage.getItem("wish")) || [];
     setWishList(getWishData);
+    setDisplayWishList(getWishData);
   }, []);
 
   return (
@@ -49,27 +63,23 @@ const Wishlist = () => {
             tabIndex={0}
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li
-              onClick={() => {
-                handleReadListFilter("all");
-              }}
-            >
+            <li onClick={() => handleWishListFilter("all")}>
               <a>All</a>
             </li>
-            <li onClick={() => handleReadListFilter("category")}>
-              <a>Category</a>
-            </li>
-            <li onClick={() => handleReadListFilter("rating")}>
+            <li onClick={() => handleWishListFilter("rating")}>
               <a>Rating</a>
             </li>
-            <li>
+            <li onClick={() => handleWishListFilter("totalPages")}>
               <a>Number of pages</a>
+            </li>
+            <li onClick={() => handleWishListFilter("yearOfPublishing")}>
+              <a>Published year</a>
             </li>
           </ul>
         </div>
       </div>
       {/*  */}
-      {displayBooks.map((book) => (
+      {displayWishList.map((book) => (
         <div
           className="p-8 lg:flex space-x-6 dark:bg-gray-50 dark:text-gray-800 border"
           key={book.bookId}
@@ -123,7 +133,12 @@ const Wishlist = () => {
               <p className=" border rounded-3xl p-2 font-medium text-[#FFAC33] bg-[#FFAC331A] border-none">
                 Rating: {book.rating}
               </p>
-              <button className="btn">View Details</button>
+              <Link to={`/book-details/${book.bookId}`}>
+                {" "}
+                <button className="btn rounded-full text-white font-medium text-lg bg-[#23BE0A]">
+                  View Details
+                </button>
+              </Link>{" "}
             </div>
           </div>
         </div>
