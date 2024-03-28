@@ -25,11 +25,11 @@ const Home = () => {
           className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50"
         >
           <div className="lg:p-20 space-y-2 lg:col-span-7 border justify-center items-center py-8">
-            <h3 className="text-2xl lg:text-6xl py-4 font-semibold sm:text-4xl ">
+            <h3 className="text-2xl lg:text-6xl py-4 font-semibold sm:text-4xl py-8 ">
               Books to freshen up your bookshelf{" "}
             </h3>
             <NavLink to="/listedBooks" className="">
-              <button className="btn btn-primary">View The List</button>
+              <button className="btn text-xl font-bold bg-[#23BE0A] text-white">View The List</button>
             </NavLink>{" "}
           </div>
           {books.length > 0 && (

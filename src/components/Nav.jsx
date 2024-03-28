@@ -59,6 +59,28 @@ const Nav = () => {
               >
                 Pages to Read
               </NavLink>
+
+              <NavLink
+              to="/feedback"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#23BE0A] border rounded-lg p-4 font-semibold border-[#23BE0A]"
+                  : ""
+              }
+            >
+              Feedback
+            </NavLink>
+
+            <NavLink
+              to="/subscribe"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#23BE0A] border rounded-lg p-4 font-semibold border-[#23BE0A]"
+                  : ""
+              }
+            >
+              Subscribe
+            </NavLink>
             </ul>
           </div>
           <a className="btn btn-ghost lg:text-3xl font-bold ">Book Vibe</a>
@@ -97,11 +119,35 @@ const Nav = () => {
             >
               Pages to Read
             </NavLink>
+
+            <NavLink
+              to="/feedback"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#23BE0A] border rounded-lg p-4 font-semibold border-[#23BE0A]"
+                  : ""
+              }
+            >
+              Feedback
+            </NavLink>
+
+            <NavLink
+              to="/subscribe"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#23BE0A] border rounded-lg p-4 font-semibold border-[#23BE0A]"
+                  : ""
+              }
+            >
+              Subscribe
+            </NavLink>
+
+
           </ul>
         </div>
-        <div className="navbar-end gap-8">
-          <a className="btn bg-[#23BE0A] text-white">Sign In</a>
-          <a className="btn bg-[#59C6D2] text-white">Sign Up</a>
+        <div className="navbar-end lg:gap-8">
+          <a className="btn bg-[#23BE0A] text-white font-semibold text-lg">Sign In</a>
+          <a className="btn bg-[#59C6D2] text-white font-semibold text-lg">Sign Up</a>
         </div>
       </div>
     </div>
