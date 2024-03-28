@@ -24,7 +24,7 @@ export const saveWishlistDataToLocal = (book) => {
   if (isExistInWishlist) {
     toast.error('This book is already in your wishlist.')
   } else if (isExistInRead) {
-    toast.error("it is already been added and this Book will not be added to the list.");
+    toast.error("You already read the book, you can not add it to the wishlist");
   } else {
     saveWish.push(book);
     localStorage.setItem("wish", JSON.stringify(saveWish));

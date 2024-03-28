@@ -83,7 +83,7 @@ const Nav = () => {
             </NavLink>
             </ul>
           </div>
-          <a className="btn btn-ghost lg:text-3xl font-bold ">Book Vibe</a>
+          <a className=" lg:text-3xl font-bold ">Book Vibe</a>
         </div>
         <div className="navbar-center hidden lg:flex gap-8">
           <ul className="menu menu-horizontal px-1 gap-8 justify-center items-center ">

@@ -133,12 +133,16 @@ const Wishlist = () => {
               <p className=" border rounded-3xl p-2 font-medium text-[#FFAC33] bg-[#FFAC331A] border-none">
                 Rating: {book.rating}
               </p>
+
+
               <Link to={`/book-details/${book.bookId}`}>
                 {" "}
                 <button className="btn rounded-full text-white font-medium text-lg bg-[#23BE0A]">
                   View Details
                 </button>
               </Link>{" "}
+
+
             </div>
           </div>
         </div>
